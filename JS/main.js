@@ -2,7 +2,7 @@ const productos = [
     {
         id: 'Tomates',
         titulo: 'Tomates',
-        Image: "../imagenes/tomates.jpg", // Asegúrate de que esta ruta sea correcta
+        Image: "", 
         categorias: {
             nombre: "Verduras",
             id: 'Verduras'
@@ -12,7 +12,7 @@ const productos = [
     {
         id: 'Yogurt',
         titulo: 'Yogurt',
-        Image: "../imagenes/yogurt.jpg", // Asegúrate de que esta ruta sea correcta
+        Image: "", 
         categorias: {
             nombre: "Lacteos",
             id: 'Lacteos'
@@ -22,7 +22,7 @@ const productos = [
     {
         id: 'Miel',
         titulo: 'Miel',
-        Image: "../imagenes/miel.jpg", // Asegúrate de que esta ruta sea correcta
+        Image: "",
         categorias: {
             nombre: "Otros",
             id: 'Otros'
