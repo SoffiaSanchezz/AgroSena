@@ -1,0 +1,351 @@
+/* Clases globales */
+.titulo {
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.texto{
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+.texto-bold{
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration:solid;
+}
+/*Clases del navbar*/
+.navbar {
+    background-color: white;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+.navbar-verde {
+    background-color: #6ECF42;
+        height: 80px;
+        margin: 20px;
+        border-radius: 16px;
+        padding: 0.5rem;
+}
+
+.login-button {
+    background-color: #6ECF42;
+    color: white;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover {
+    background-color: #6B456C;
+
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25cm;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: grey;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: black;
+}
+.agroSena{
+    font-size: 50px;
+    color: #6ECF42;
+    -moz-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 2px;
+    -moz-text-stroke-color: #ffffe5;
+    -webkit-text-stroke-color: #31A252;
+    text-shadow: 7px 7px #6b456c3f;
+    }
+
+
+@media (min-width: 991px) {
+
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #6ECF42;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+.position-relative .num{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    padding: 0.5em 0.6em;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+}
+/*estilo de las cards de prductos destacados*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+
+.products .products-container {
+    display: flex;
+    margin: 8px;
+    margin-top: 1rem;
+}
+
+.products .products-container .box {
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    background-color: #faf9f9;
+    box-shadow: 1px 2px 11px 4px rgb(14, 55, 54 / 15%);
+    border-radius: 0.5rem;
+    outline: 2px solid #faf9f9;
+}
+
+.products .products-container .box:hover {
+    outline: 3px solid #dd0028;
+}
+
+.box-text {
+    text-align: start;
+}
+
+.products .products-container .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+
+}
+
+.products-container .box h6 {
+    font-weight: 800;
+    font-size: 13px;
+    color: #ff9c01;
+}
+
+.products-container .box h2 {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+.products-container .box h5 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.products-container .box .price {
+    font-size: 1.8rem;
+    color: #dd0028;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.products-container .box .ph-shopping-cart {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background: #dd0028;
+    color: #faf9f9;
+    font-size: 2rem;
+    border-radius: 0.5rem 0;
+    cursor: pointer;
+}
+
+.productos-container .box .fa-shopping-cart{
+    position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 10px;
+        background: #dd0028;
+        color: #faf9f9;
+        font-size: 2rem;
+        border-radius: 0.5rem 0;
+        cursor: pointer;
+}
+
+.products-container .box .ph-shopping-cart:hover {
+    background-color: #ff9c01;
+    transition: 0.2s all linear;
+}
+.productos-container .box .fa-shopping-cart:hover{
+    background-color: #ff9c01;
+    transition: 0.2s all linear;
+}
+
+.products-container .box .ph-heart {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #dd0028;
+}
+
+.products-container .box .ph-heart:hover {
+    color: #ff9c01;
+    transition: 0.2s all linear;
+}
+
+.products-container .box .discount {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    background: #ff9c01;
+    color: #faf9f9;
+    padding: 3px 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    clip-path: polygon(100% 0% 80% 50% 100% 100%, 0 100%, 0% 50%, 0 0);
+}
+/* estilos del Footer*/
+footer{
+    background-color: #6ECF42;
+    border-top: #31A252 2px solid;
+    justify-content: space-between;
+}
+.conocenos{
+    background-color: #ffffe580;
+    border-radius: 20px;
+}
+
+.boton{
+    background-color: #6ECF42;
+    border: #31A252 2px solid;
+    border-radius: 5px;
+    margin: 5px;
+}
+.boton:hover{
+    background-color: #31A252;
+    border: #6ECF42 2px solid;
+}
+.iconos{
+    color: #ffffe5;
+}
+
+/* fondo de los titlos */
+/* fondo */
+content {
+    position: relative;
+    padding: 50px;
+}
+
+.svg-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.tituloContcto {
+    position: relative;
+    z-index: 1;
+    color: black;
+    text-align: center;
+    font-size: 50px;
+}
+
+.tituloProducto {
+    position: relative;
+    z-index: 1;
+    color: black;
+    text-align: center;
+    font-size: 50px;
+}
+.contact-wrapper {
+    padding-top: 60px;
+    /* Ajusta según sea necesario para espacio entre título y contenido */
+}
+
+.producto-wrapper {
+    padding-top: 110px;
+        /* Ajusta según sea necesario para espacio entre título y contenido */
+}
+
+/* Estilos responsivos para móviles */
+@media (max-width: 600px) {
+    .tituloContcto {
+        margin-top: 110px;
+        /* Ajuste para móviles */
+        font-size: 40px;
+    }
+}
+
+/* Estilos responsivos para tabletas */
+@media (min-width: 601px) and (max-width: 992px) {
+    .tituloContcto {
+        margin-top: 110px;
+        font-size: 70px;
+        /* Ajuste para tabletas */
+    }
+}
+
+/* el scroll de la pagina en general */
+/* Estilo para la barra de desplazamiento vertical */
+/* Esto afectará solo a la barra de desplazamiento vertical */
+/* y no a la barra de desplazamiento horizontal */
+
+/* Estilo para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 5px;
+    /* Ancho de la barra */
+}
+
+/* Estilo para la pista de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* Color de fondo de la pista */
+}
+
+/* Estilo para el pulgar de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background-color: #31A252;
+    /* Color del pulgar (en este caso, verde) */
+    border-radius: 5px;
+    /* Borde redondeado del pulgar */
+}
+
+/* Aplicar el estilo solo a la barra de desplazamiento vertical */
+/* Puedes ajustar este selector según el contenedor que desees */
+/* afectar con la barra de desplazamiento personalizada */
+/* Por ejemplo, si el contenedor tiene la clase "contenedor", */
+/* puedes usar ".contenedor::-webkit-scrollbar" */
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* Afecta solo a la barra de desplazamiento vertical */
+}

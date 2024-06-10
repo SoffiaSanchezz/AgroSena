@@ -1,0 +1,107 @@
+/* Reset y estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+
+/* Estilos para la sección de productos */
+.container .productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Añadir esta línea para que los elementos se ajusten correctamente */
+    margin: 8px;
+    margin-top: 1rem;
+}
+
+.container .productos-container .producto {
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    background-color: #faf9f9;
+    box-shadow: 1px 2px 11px 4px rgb(14, 55, 54 / 15%);
+    border-radius: 0.5rem;
+    outline: 2px solid #faf9f9;
+}
+
+.container .productos-container .producto:hover {
+    outline: 3px solid #dd0028;
+}
+
+.producto-texto {
+    text-align: start;
+}
+
+.container .productos-container .producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.container .productos-container .producto h6 {
+    font-weight: 800;
+    font-size: 13px;
+    color: #ff9c01;
+}
+
+.container .productos-container .producto h2 {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+.container .productos-container .producto h5 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.container .productos-container .producto .precio {
+    font-size: 1.8rem;
+    color: #dd0028;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container .productos-container .producto .fa-shopping-cart {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background: #dd0028;
+    color: #faf9f9;
+    font-size: 2rem;
+    border-radius: 0.5rem 0;
+    cursor: pointer;
+}
+
+.container .productos-container .producto .fa-shopping-cart:hover {
+    background-color: #ff9c01;
+    transition: 0.2s all linear;
+}
+
+.container .productos-container .producto .ph-heart {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #dd0028;
+}
+
+.container .productos-container .producto .ph-heart:hover {
+    color: #ff9c01;
+    transition: 0.2s all linear;
+}
+
+.container .productos-container .producto .descuento {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    background: #ff9c01;
+    color: #faf9f9;
+    padding: 3px 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    clip-path: polygon(100% 0% 80% 50% 100% 100%, 0 100%, 0% 50%, 0 0);
+}
