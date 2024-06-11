@@ -2,7 +2,7 @@ const productos = [
     {
         id: 'Tomates',
         titulo: 'Tomates',
-        Image: "", 
+        Image: "../img/tomates.jpg",  // Asegúrate de que esta imagen exista en la carpeta img
         categorias: {
             nombre: "Verduras",
             id: 'Verduras'
@@ -12,7 +12,7 @@ const productos = [
     {
         id: 'Yogurt',
         titulo: 'Yogurt',
-        Image: "./img/yogurt.jpg", 
+        Image: "../img/yogurt.jpg", 
         categorias: {
             nombre: "Lacteos",
             id: 'Lacteos'
@@ -22,7 +22,7 @@ const productos = [
     {
         id: 'Miel',
         titulo: 'Miel',
-        Image: "./img/miel.avif",
+        Image: "../img/miel.avif",
         categorias: {
             nombre: "Otros",
             id: 'Otros'
@@ -32,7 +32,7 @@ const productos = [
     {
         id: 'Acelga',
         titulo: 'Acelga',
-        Image: "./img/acelga.jpg",
+        Image: "../img/acelga.jpg",
         categorias: {
             nombre: "Verduras",
             id: 'Verduras'
@@ -42,7 +42,7 @@ const productos = [
     {
         id: 'Astromelia',
         titulo: 'Astromelia',
-        Image: "./img/astromelias.jpg",
+        Image: "../img/astromelias.jpg",
         categorias: {
             nombre: "Otros",
             id: 'Otros'
@@ -52,17 +52,37 @@ const productos = [
     {
         id: 'Espinaca',
         titulo: 'Espinaca',
-        Image: "./img/espinaca.jpg",
+        Image: "../img/espinaca.jpg",
         categorias: {
             nombre: "Verduras",
-            id: 'Otros'
+            id: 'Verduras'
         },
         precio: 5000
     },
     {
         id: 'Lechuga',
         titulo: 'Lechuga',
-        Image: "./img/lechuga.webp",
+        Image: "../img/lechuga.webp",
+        categorias: {
+            nombre: "Verduras",
+            id: 'Verduras'
+        },
+        precio: 5000
+    },
+    {
+        id: 'Zanahoria',
+        titulo: 'Zanahoria',
+        Image: "../img/zanahoria.webp",
+        categorias: {
+            nombre: "Verduras",
+            id: 'Verduras'
+        },
+        precio: 5000
+    },
+    {
+        id: 'Zuchini',
+        titulo: 'Zuchini',
+        Image: "../img/zuchini.jpeg",
         categorias: {
             nombre: "Verduras",
             id: 'Verduras'
@@ -72,7 +92,7 @@ const productos = [
     {
         id: 'QuesoCosteño',
         titulo: 'Queso Costeño',
-        Image: "./img/quesoCosteño.webp",
+        Image: "../img/quesoCosteño.webp",
         categorias: {
             nombre: "Lacteos",
             id: 'Lacteos'
@@ -82,33 +102,13 @@ const productos = [
     {
         id: 'QuesoPaipa',
         titulo: 'Queso Paipa',
-        Image: "./img/quesoPaipa.jpg",
+        Image: "../img/quesoPaipa.jpg",
         categorias: {
             nombre: "Lacteos",
             id: 'Lacteos'
         },
         precio: 5000
     },
-    {
-        id: 'Zanahoria',
-        titulo: 'Zanahoria',
-        Image: "./img/zanahoria.webp",
-        categorias: {
-            nombre: "Verduras",
-            id: 'Veruras'
-        },
-        precio: 5000
-    },
-    {
-        id: 'Zuchini',
-        titulo: 'Zuchini',
-        Image: "./img/Zuchini.jpeg",
-        categorias: {
-            nombre: "Verduras",
-            id: 'Verduras'
-        },
-        precio: 5000
-    }
 ];
 
 const contenedorProductos = document.querySelector("#contenedor-productos .row");
@@ -139,7 +139,6 @@ function cargarProductos(productosElegidos) {
         contenedorProductos.appendChild(div);
     });
     actualizarBotonesAgregar();
-    // console.log(botonesAgregar);
 }
 
 cargarProductos(productos);
@@ -163,7 +162,7 @@ botonesCategorias.forEach(boton => {
             tituloPrincipal.innerText = productoCategoria.categorias.nombre
             const productosBoton = productos.filter(producto => producto.categorias.id === e.currentTarget.id);
         } else {
-            tituloPrincipal.innerText = "todos los productos "
+            tituloPrincipal.innerText = "todos los productos"
             cargarProductos(productos)
         }
     });
@@ -188,7 +187,6 @@ function agregarAlCarrito(e){
         productoAgregado.cantidad = 1;
         productosEnCarrito.push(productoAgregado);
     }
-    // console.log(productosEnCarrito)
     actualizarNumerito();
 
     localStorage.setItem('productos-en-carrito', JSON.stringify(productosEnCarrito));
@@ -198,5 +196,3 @@ function actualizarNumerito(){
     let nuevoNumerito = productosEnCarrito.reduce((acc, productos) => acc + productos.cantidad, 0);
     numerito.innerHTML = nuevoNumerito;
 }
-
-
