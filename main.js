@@ -82,7 +82,7 @@ const productos = [
     {
         id: 'Zuchini',
         titulo: 'Zuchini',
-        Image: "../img/zuchini.jpeg",
+        Image: "../img/Zuchini.jpeg",
         categorias: {
             nombre: "Verduras",
             id: 'Verduras'
