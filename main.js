@@ -12,7 +12,7 @@ const productos = [
     {
         id: 'Yogurt',
         titulo: 'Yogurt',
-        Image: "", 
+        Image: "./img/yogurt.jpg", 
         categorias: {
             nombre: "Lacteos",
             id: 'Lacteos'
@@ -22,10 +22,90 @@ const productos = [
     {
         id: 'Miel',
         titulo: 'Miel',
-        Image: "",
+        Image: "./img/miel.avif",
         categorias: {
             nombre: "Otros",
             id: 'Otros'
+        },
+        precio: 5000
+    },
+    {
+        id: 'Acelga',
+        titulo: 'Acelga',
+        Image: "./img/acelga.jpg",
+        categorias: {
+            nombre: "Verduras",
+            id: 'Verduras'
+        },
+        precio: 5000
+    },
+    {
+        id: 'Astromelia',
+        titulo: 'Astromelia',
+        Image: "./img/astromelias.jpg",
+        categorias: {
+            nombre: "Otros",
+            id: 'Otros'
+        },
+        precio: 5000
+    },
+    {
+        id: 'Espinaca',
+        titulo: 'Espinaca',
+        Image: "./img/espinaca.jpg",
+        categorias: {
+            nombre: "Verduras",
+            id: 'Otros'
+        },
+        precio: 5000
+    },
+    {
+        id: 'Lechuga',
+        titulo: 'Lechuga',
+        Image: "./img/lechuga.webp",
+        categorias: {
+            nombre: "Verduras",
+            id: 'Verduras'
+        },
+        precio: 5000
+    },
+    {
+        id: 'QuesoCosteño',
+        titulo: 'Queso Costeño',
+        Image: "./img/quesoCosteño.webp",
+        categorias: {
+            nombre: "Lacteos",
+            id: 'Lacteos'
+        },
+        precio: 5000
+    },
+    {
+        id: 'QuesoPaipa',
+        titulo: 'Queso Paipa',
+        Image: "./img/quesoPaipa.jpg",
+        categorias: {
+            nombre: "Lacteos",
+            id: 'Lacteos'
+        },
+        precio: 5000
+    },
+    {
+        id: 'Zanahoria',
+        titulo: 'Zanahoria',
+        Image: "./img/zanahoria.webp",
+        categorias: {
+            nombre: "Verduras",
+            id: 'Veruras'
+        },
+        precio: 5000
+    },
+    {
+        id: 'Zuchini',
+        titulo: 'Zuchini',
+        Image: "./img/Zuchini.jpeg",
+        categorias: {
+            nombre: "Verduras",
+            id: 'Verduras'
         },
         precio: 5000
     }
@@ -35,6 +115,8 @@ const contenedorProductos = document.querySelector("#contenedor-productos .row")
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");
 let botonesAgregar = document.querySelectorAll(".producto-agregar");
+const numerito = document.querySelector('#numerito');
+
 
 function cargarProductos(productosElegidos) {
     contenedorProductos.innerHTML = "";
@@ -100,10 +182,21 @@ function agregarAlCarrito(e){
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idBoton);
     if(productosEnCarrito.some((producto) => producto.id === idBoton)){
-
+        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton)
+        productosEnCarrito[index].cantidad++;
     }else{
         productoAgregado.cantidad = 1;
         productosEnCarrito.push(productoAgregado);
     }
-    console.log(productosEnCarrito)
+    // console.log(productosEnCarrito)
+    actualizarNumerito();
+
+    localStorage.setItem('productos-en-carrito', JSON.stringify(productosEnCarrito));
 }
+
+function actualizarNumerito(){
+    let nuevoNumerito = productosEnCarrito.reduce((acc, productos) => acc + productos.cantidad, 0);
+    numerito.innerHTML = nuevoNumerito;
+}
+
+
