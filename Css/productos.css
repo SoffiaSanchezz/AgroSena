@@ -111,3 +111,19 @@
     object-fit: contain;
     border-radius: 20px;
 }
+
+.container .productos-container .producto .ver-detalles {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    color: #31A252;
+    border-radius: 0.5rem 0;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    border: none;
+}
+.container .productos-container .producto .ver-detalles:hover {
+    background-color: #31a2539f;
+    color: #dd0028;
+}
