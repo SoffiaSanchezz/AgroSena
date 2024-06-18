@@ -229,30 +229,7 @@
     font-size: 1.2rem;
     clip-path: polygon(100% 0% 80% 50% 100% 100%, 0 100%, 0% 50%, 0 0);
 }
-/* estilos del Footer*/
-footer{
-    background-color: #6ECF42;
-    border-top: #31A252 2px solid;
-    justify-content: space-between;
-}
-.conocenos{
-    background-color: #ffffe580;
-    border-radius: 20px;
-}
 
-.boton{
-    background-color: #6ECF42;
-    border: #31A252 2px solid;
-    border-radius: 5px;
-    margin: 5px;
-}
-.boton:hover{
-    background-color: #31A252;
-    border: #6ECF42 2px solid;
-}
-.iconos{
-    color: #ffffe5;
-}
 
 /* fondo de los titlos */
 /* fondo */
@@ -502,3 +479,6 @@ footer .wave#wave4 {
     }
 
 }
+
+
+

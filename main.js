@@ -2,7 +2,7 @@ const productos = [
     {
         id: 'Tomates',
         titulo: 'Tomates',
-        Image: "../img/tomates.jpg",  // Asegúrate de que esta imagen exista en la carpeta img
+        Image: "../img/tomate.jpg",  // Asegúrate de que esta imagen exista en la carpeta img
         categorias: {
             nombre: "Verduras",
             id: 'Verduras'
@@ -176,7 +176,16 @@ function actualizarBotonesAgregar(){
     })
 }
 
-const productosEnCarrito = [];
+let productosEnCarrito;
+
+const productosEnCarritoLS = JSON.parse(localStorage.getItem("productos-en-carrito"));
+if(productosEnCarritoLS){
+    productosEnCarrito = productosEnCarritoLS;
+    actualizarNumerito();
+}else{
+    productosEnCarrito = [];
+}
+
 function agregarAlCarrito(e){
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idBoton);
@@ -196,3 +205,4 @@ function actualizarNumerito(){
     let nuevoNumerito = productosEnCarrito.reduce((acc, productos) => acc + productos.cantidad, 0);
     numerito.innerHTML = nuevoNumerito;
 }
+
