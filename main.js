@@ -1,3 +1,4 @@
+// Array de productos (puede estar en productos.html o en index.html, dependiendo del contexto)
 const productos = [
     {
         id: 'Tomates',
@@ -171,6 +172,9 @@ if (productosEnCarritoLS) {
     productosEnCarrito = [];
 }
 
+// Cargar productos inicialmente
+cargarProductos(productos);
+
 function cargarProductos(productosElegidos) {
     contenedorProductos.innerHTML = "";
 
@@ -260,43 +264,6 @@ function agregarAlCarrito(e) {
     localStorage.setItem('productos-en-carrito', JSON.stringify(productosEnCarrito));
 }
 
-function actualizarNumerito() {
-    let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
-    numerito.innerText = nuevoNumerito;
-}
-
-// Cargar productos inicialmente
-cargarProductos(productos);
-
-// Función para agregar un producto al carrito
-function agregarAlCarrito(idProducto) {
-    // Buscar el producto en el array productos
-    const productoSeleccionado = productos.find(producto => producto.id === idProducto);
-
-    if (productoSeleccionado) {
-        // Verificar si el producto ya está en el carrito
-        const enCarrito = productosEnCarrito.find(item => item.id === idProducto);
-
-        if (enCarrito) {
-            // Incrementar la cantidad si el producto ya está en el carrito
-            enCarrito.cantidad++;
-        } else {
-            // Agregar el producto al carrito con cantidad inicial 1
-            const productoAgregado = { ...productoSeleccionado, cantidad: 1 };
-            productosEnCarrito.push(productoAgregado);
-        }
-
-        // Actualizar visualmente el contador del carrito
-        actualizarNumerito();
-
-        // Guardar en localStorage
-        localStorage.setItem('productos-en-carrito', JSON.stringify(productosEnCarrito));
-    } else {
-        console.error(`El producto con id ${idProducto} no se encontró en la lista de productos.`);
-    }
-}
-
-// Función para actualizar el contador del carrito (numerito)
 function actualizarNumerito() {
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.textContent = nuevoNumerito;
