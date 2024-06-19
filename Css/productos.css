@@ -127,3 +127,9 @@
     background-color: #31a2539f;
     color: #dd0028;
 }
+
+.producto-img-modal{
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 1rem;
+}
