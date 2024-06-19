@@ -41,7 +41,7 @@ bash
 <div>
   <h2>Responsivo <img width="40" src="https://media4.giphy.com/media/6IdLsnPkzcgSx2f2rH/200.webp?cid=790b76110cburx8p3hg6r2s2fgrpct9mseet232jp4sj51db&ep=v1_stickers_search&rid=200.webp&ct=s"/></h2>
     <p>Aqui podras ver como se ve la tienda en distintos tamaños de pantallas</p>
-  <img width="50" align="center" src="" />
+  <img width="50" align="center" src="https://github.com/SoffiaSanchezz/AgroSena/blob/main/img/Resposive.png" />
 </div>
 
 
