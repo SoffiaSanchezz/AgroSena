@@ -121,8 +121,8 @@ const productos = [
             id: 'Verduras'
         },
         masInformacion: {
-            nombre:"Tacos de Lechuga con Pollo",
-            Image:"../img/LechugaPollo.webp",
+            nombre:"Zanahoria Glaseada",
+            Image:"../img/ZanahoriaGlaceada.jpg",
             ingredientes: "1 pechuga de pollo, cocida y desmenuzada - 1 cucharada de aceite de oliva - 1 diente de ajo, picado finamente - 1 cucharadita de comino en polvo - 1 cucharadita de pimentón - Sal y pimienta al gusto - 1 lechuga romana o iceberg, deshojada y lavada - 1 tomate, picado en cubos pequeños - 1/2 cebolla roja, picada finamente - 1/2 taza de maíz (puede ser congelado y descongelado o enlatado y escurrido) - 1/4 taza de cilantro fresco, picado - Jugo de 1 limón - Salsa de yogur o guacamole (opcional, para servir)",
             instruccion: "1- En una sartén grande, calienta el aceite de oliva a fuego medio. 2. Añade el ajo picado y saltea hasta que esté fragante, aproximadamente 1 minuto. 3. Agrega el pollo desmenuzado a la sartén junto con el comino, el pimentón, la sal y la pimienta. Cocina durante 5-7 minutos, mezclando bien para que el pollo absorba los sabores de las especias. 4. Mientras tanto, prepara las hojas de lechuga, asegurándote de que estén limpias y secas. Estas servirán como tacos. 5. En un tazón grande, mezcla el tomate, la cebolla roja, el maíz y el cilantro. Agrega el jugo de limón y mezcla bien. Sazona con sal y pimienta al gusto. 6. Para armar los tacos, coloca una porción de pollo cocido en el centro de cada hoja de lechuga. 7. Añade una cucharada de la mezcla de vegetales sobre el pollo. 8. Si lo deseas, agrega una cucharada de salsa de yogur o guacamole sobre los tacos. 9. Sirve inmediatamente y disfruta estos tacos frescos y saludables."
         },
