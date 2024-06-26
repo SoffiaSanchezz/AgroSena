@@ -318,8 +318,8 @@ function mostrarMasDetalles(event) {
     masInformacionDiv.innerHTML = `
         <p class="texto-bold"><strong class="titulo fs-3">Receta:</strong> ${producto.masInformacion.nombre}</p>
         <img src="${producto.masInformacion.Image}" alt="${producto.titulo}" class="producto-img-modal" >
-        <p class="texto"><strong class="titulo">Ingredientes:</strong> ${producto.masInformacion.ingredientes}</p>
-        <p class="texto"><strong class="titulo">Ingredientes:</strong> ${producto.masInformacion.instruccion}</p>
+        <p class="texto-Modal"><strong class="titulo">Ingredientes:</strong> ${producto.masInformacion.ingredientes}</p>
+        <p class="texto-Modal"><strong class="titulo">Ingredientes:</strong> ${producto.masInformacion.instruccion}</p>
         <p class="titulo d-flex justify-content-center" > ¡Espero que te guste! </p>
     `;
 }
